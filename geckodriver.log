@@ -1,0 +1,71 @@
+1635215273615	geckodriver	INFO	Listening on 127.0.0.1:51112
+1635215273778	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51113" "-foreground" "-no-remote" "-profile" "/var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofilexGPg98"
+1635215274539	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofilexGPg98/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:51113/devtools/browser/e5299fae-6fb1-7d41-a6f2-3071afd33512
+1635215277576	Marionette	INFO	Listening on port 51138
+1635215277612	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://services-settings/Attachments.jsm, line 391: TypeError: / is not a valid URL.
+1635215351783	Marionette	INFO	Stopped listening on port 51138
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1635215566350	geckodriver	INFO	Listening on 127.0.0.1:51223
+1635215566880	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51224" "-foreground" "-no-remote" "-profile" "/var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofile0FLnnN"
+1635215567509	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofile0FLnnN/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:51224/devtools/browser/288f43d5-a39c-104d-8d29-2f23da928c15
+1635215570320	Marionette	INFO	Listening on port 51231
+1635215570386	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://services-settings/Attachments.jsm, line 391: TypeError: / is not a valid URL.
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1010319985, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1010319985, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1010319985 line 1 > eval, line 1: unreachable code after return statement
+1635215634634	Marionette	INFO	Stopped listening on port 51231
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1635216373786	geckodriver	INFO	Listening on 127.0.0.1:51422
+1635216374316	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "51423" "-foreground" "-no-remote" "-profile" "/var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofileQjMxKp"
+1635216375172	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofileQjMxKp/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:51423/devtools/browser/8382a82e-6806-4143-9bc8-3fb451aa427f
+1635216377849	Marionette	INFO	Listening on port 51430
+1635216377939	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://services-settings/Attachments.jsm, line 391: TypeError: / is not a valid URL.
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1024612609, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1024612609, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1024612609, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1024612609 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www9.state.nj.us/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1024612609 line 1 > eval, line 1: unreachable code after return statement
+1635216443945	Marionette	INFO	Stopped listening on port 51430
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1635219350883	geckodriver	INFO	Listening on 127.0.0.1:52374
+1635219350921	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52375" "-foreground" "-no-remote" "-profile" "/var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofilecZbgEO"
+1635219351966	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofilecZbgEO/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:52375/devtools/browser/5cdf00c3-b646-964c-a365-bb69778c798f
+1635219354949	Marionette	INFO	Listening on port 52380
+1635219354993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://services-settings/Attachments.jsm, line 391: TypeError: / is not a valid URL.
+1635219403402	geckodriver	INFO	Listening on 127.0.0.1:52454
+1635219403423	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52455" "-foreground" "-no-remote" "-profile" "/var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofileOqOu0L"
+1635219404114	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/b2/_f40t1b57hb8lwh4wbjc_k3r0000gn/T/rust_mozprofileOqOu0L/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:52455/devtools/browser/06f304dc-afad-cc46-8d0a-b50b9332c42b
+1635219407249	Marionette	INFO	Listening on port 52460
+1635219407341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://services-settings/Attachments.jsm, line 391: TypeError: / is not a valid URL.
