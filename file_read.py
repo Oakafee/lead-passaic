@@ -19,7 +19,7 @@ def read_file(path):
 	lead_table = pd.read_html(lead_page, header=4, attrs = {'id': 'PB'})
 	lead_page.close()
 	
-	return format_lead_df(lead_table)
+	return format_lead_df(lead_table, ws_table)
 	
 	'''
 	if not formatted_df.empty:
@@ -27,7 +27,7 @@ def read_file(path):
 	'''
 
 
-def format_lead_df(lead_table):
+def format_lead_df(lead_table, ws_table):
 	dates = lead_table[0]['Compliance Period']
 	freq = lead_table[0]['SampleFrequency']
 	conc = lead_table[0]['90th Percentile*']
@@ -62,11 +62,19 @@ def format_lead_df(lead_table):
 		'Start dates': start_dates,
 		'End dates': end_dates,
 	#	freq.name: freq,
-		'Lead in mg/L': conc_numeric
+		'Lead in mg/L': conc_numeric,
+		# PWSID
+		ws_table[0][0][0]: ws_table[0][1][0],
+		# Water System Name
+		ws_table[0][0][1]: ws_table[0][1][1],
+		# Principal County and City
+		# TODO: separate into county, town and code columns
+		ws_table[0][0][3]: ws_table[0][1][3]
 	}
 
 	try:
 		lead_df = pd.DataFrame(lead_df)
+		print(lead_df.head())
 	except:
 		print('problem formatting DF:', lead_df)
 		lead_df = pd.DataFrame({})
