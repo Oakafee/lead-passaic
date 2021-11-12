@@ -15,11 +15,11 @@ for table in tables:
 	#print(type(table))
 	try:
 		# TODO: make sure to include other fields
-		start = table.loc[:,['Start dates','Lead in mg/L']]
-		end = table.loc[:,['End dates','Lead in mg/L']]
+		start = table.loc[:, table.columns != 'End dates',]
+		end = table.loc[:, table.columns != 'Start dates']
 
 	except:
-		print('This data frame is empty for some reason')
+		print('This data frame is empty or invalid for some reason')
 	else:
 		start.rename(columns = {'Start dates':'date'}, inplace = True)
 		end.rename(columns = {'End dates':'date'}, inplace = True)
