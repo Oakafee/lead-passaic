@@ -1,3 +1,5 @@
+# This is the up-to-date way to load in data
+
 import os
 import pickle
 import numpy
@@ -6,7 +8,9 @@ import data_format
 
 BASE_PATH = '/Users/Oakafee/Documents/Grad_school/gisProgramming/project/'
 HTML_FOLDER = 'web_lead'
-PICKLE_PATH = 'ws_data/all_lead_as_one.pkl'
+PICKLE_PATH = 'ws_data/all_lead_as_one_3.pkl'
+# Combines start and end dates into one
+STACK_DATES = False
 
 cwd = os.getcwd()
 
@@ -51,14 +55,14 @@ def format_lead_df(lead_table, ws_table):
 	county, city, muncode = data_format.muni_info(muni)
 			
 	lead_df = {
-		'Start dates': start_dates,
-		'End dates': end_dates,
+		'Start_dates': start_dates,
+		'End_dates': end_dates,
 	#	freq.name: freq,
-		'Lead in mg/L': data_format.conc_numeric(conc),
+		'Lead_in_mg/L': data_format.conc_numeric(conc),
 		# PWSID
 		'PWSID': pwsid,
 		# Water System Name
-		'Water system name': ws_name,
+		'Water_system_name': ws_name,
 		# Principal County and City
 		'City': city,
 		'County': county,
@@ -72,7 +76,10 @@ def format_lead_df(lead_table, ws_table):
 		print('problem formatting DF:', lead_df)
 		lead_df = False
 	else:
-		lead_df = stack_dates(lead_df)
+		if STACK_DATES:
+			lead_df = stack_dates(lead_df)
+		else:
+			lead_df.sort_values(by='Start_dates', inplace=True)
 
 	return lead_df
 
