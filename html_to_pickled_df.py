@@ -58,7 +58,7 @@ def format_lead_df(lead_table, ws_table):
 		'Start_dates': start_dates,
 		'End_dates': end_dates,
 	#	freq.name: freq,
-		'Lead_in_mg/L': data_format.conc_numeric(conc),
+		'Lead_in_mgL': data_format.conc_numeric(conc),
 		# PWSID
 		'PWSID': pwsid,
 		# Water System Name

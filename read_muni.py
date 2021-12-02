@@ -17,21 +17,21 @@ maxlead = lead_info.groupby(by='Muncode').max()
 # or .max()
 '''
 '''
-lead_info['mcl'] = lead_info['Lead in mg/L'] > 0.015
+lead_info['mcl'] = lead_info['Lead in mgL'] > 0.015
 lead2003 = lead_info[(lead_info.date > '2009-01-01') & (lead_info.date < '2010-01-01')]
 '''
 
-lead_info['mcl'] = lead_info['Lead in mg/L'] > 0.015
+lead_info['mcl'] = lead_info['Lead_in_mgL'] > 0.015
 '''
 lead_violations = lead_info.groupby(by='Muncode').sum()
 '''
 years = []
 for row in lead_info.itertuples():
-	years.append(row.date.year)
+	years.append(row.Start_dates.year)
 lead_info['year'] = years
 
 lead_years = lead_info.groupby(by=['Muncode','City','year']).sum('mcl').reset_index()
-print(lead_years.head())
+print(lead_years.head(), 'my love')
 
 lead_years['mcl_bool'] = (lead_years['mcl'] > 0)
 #lead2019 = lead_years[lead_years.year==2019]

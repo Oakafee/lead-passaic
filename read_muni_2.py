@@ -1,7 +1,7 @@
 import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
-from datetime import timedelta
+import data_format
 
 NJ_MUNI = '/Users/Oakafee/Documents/cunymaps/nj-municipalities-age/Govt_admin_mun_coast_bnd/Govt_admin_mun_coast_bnd.shp'
 PICKLE_PATH = '/Users/Oakafee/Documents/Grad_school/gisProgramming/project/ws_data/all_lead_as_one_3.pkl'
@@ -18,11 +18,11 @@ maxlead = lead_info.groupby(by='Muncode').max()
 # or .max()
 '''
 '''
-lead_info['mcl'] = lead_info['Lead in mg/L'] > 0.015
+lead_info['mcl'] = lead_info['Lead in mgL'] > 0.015
 lead2003 = lead_info[(lead_info.date > '2009-01-01') & (lead_info.date < '2010-01-01')]
 '''
 
-lead_mcls = lead_info[lead_info['Lead_in_mg/L'] > 0.015]
+lead_mcls = lead_info[lead_info['Lead_in_mgL'] > 0.015]
 
 # Length of time with lead problem
 lead_cities = lead_info.Muncode.unique()
@@ -31,10 +31,7 @@ lead_times = []
 for m in lead_cities:
 	time = 0
 	for n in lead_mcls[lead_mcls.Muncode == m].itertuples():
-		length = (n.End_dates - n.Start_dates)
-		# TODO; round to nearest 0.5 years
-		length = length.days / 365
-		time += length
+		time += data_format.time_delta_years(n.Start_dates, n.End_dates)
 	lead_times.append(time)
 
 lead_times_df = pd.DataFrame(data={

@@ -17,6 +17,7 @@ maxlead = lead_info.groupby(by='Muncode').max()
 
 nj_w_lead = pd.merge(nj_muni, maxlead, how="inner", left_on='MUN_CODE', right_on='Muncode')
 
+nj_muni.plot()
 nj_w_lead.plot(column='Lead_in_mg/L', cmap="OrRd", legend=True)
 plt.show()
 

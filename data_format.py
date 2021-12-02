@@ -57,4 +57,10 @@ def muni_info(muni):
 	muni = muni.split(", ")
 	muni[1] = muni[1].split("-")
 	return(muni[0], muni[1][0], muni[1][1])
-				
+
+# Takes two time delta objects
+def time_delta_years(start, end):
+	delta = end - start
+	# TODO; round to nearest 0.5 years
+	delta = delta.days / 365
+	return delta	
