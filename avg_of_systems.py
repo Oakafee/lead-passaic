@@ -14,11 +14,13 @@ dates = []
 leadcs = []
 
 for m in lead_cities:
+	# Every year, twice a year, since semiannually is the most frequent measurements we have
 	for year in range(2002,2022):
 		for month in [1, 7]:
 			ordered = lead_info[lead_info.PWSID == m].sort_values(by='Start_dates')
+			leadval = -9999
+			
 			for n in ordered.itertuples():
-				leadval = -9999
 				if ((n.Start_dates.year == year) and (n.Start_dates.month == month)):
 					leadval = n.Lead_in_mgL
 					break
@@ -27,16 +29,21 @@ for m in lead_cities:
 				if len(leadcs):
 					leadval = leadcs[-1]
 				else:
-					# if we are just starting out then just estimate the global average value TODO calculate global average value
+					# if we are just starting out then just estimate the global average value TODO estimate global average value
 					leadval = AVG_VALUE
 			leadcs.append(leadval)
 			pwsids.append(m)
-			isodate = date.fromisoformat(str(year)+'-'+str(month).zfill(2)+'-01')		
-			dates.append(isodate)
-						
-print('pwsids length', len(pwsids))
-print('dates length', len(dates))
-print('leadcs length', len(leadcs))
+			dateval = date.fromisoformat(str(year)+'-'+str(month).zfill(2)+'-01')		
+			dates.append(dateval)
+			
+			# And somewhat annoyingly, I want a second entry for each semiannual period, with the same lead value on the last day of the six-month time period
+			leadcs.append(leadval)
+			pwsids.append(m)
+			newdate = dateval.replace(
+				month = dateval.month+5,
+				day = 30
+			)
+			dates.append(newdate)
 						
 monthly_est_df = pd.DataFrame(data={
 	'PWSID': pwsids,
