@@ -40,7 +40,7 @@ for m in lead_cities:
 		weighted_conc.append(weighted)
 	weighted_conc = np.array(weighted_conc)
 	#lead_avgs.append(np.sum(weighted_conc))
-	lead_avgs.append(np.mean(weighted_conc))
+	lead_avgs.append(np.sum(weighted_conc)/total_years)
 
 lead_avg_df = pd.DataFrame(data={
 	'MUN_CODE': lead_cities,
@@ -79,7 +79,7 @@ nj_w_lead.plot(
 	legend=True,
 	legend_kwds=LEGEND_SETTINGS,
 	scheme='user_defined',
-	classification_kwds={'bins':[0.010, 0.0125, 0.015, 0.0175, 0.020]},
+	classification_kwds={'bins':[0.0025, 0.005, 0.0075, 0.010, 0.0125, 0.015]},
 	missing_kwds={'color': 'white', 'edgecolor': 'gray', 'linewidth': 0.1, 'label': 'no data'},
 )
 #plt.show()
